@@ -486,13 +486,7 @@ const PickupDeliverPage = () => {
   const fetchPickups = async () => {
     try {
       setIsLoading(true);
-      const token = await AsyncStorage.getItem('token');
-      
-      if (!token) {
-        Alert.alert('로그인 필요', '로그인이 필요합니다.');
-        setIsLoading(false);
-        return;
-      }
+     
       
       // API 호출
       const response = await fetch(
